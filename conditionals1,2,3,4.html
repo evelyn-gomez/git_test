@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Conditionals: Task 1,2,3, and 4</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <section class="preview"></section>
+    
+  </body>
+  
+  
+  <script >
+    // Conditional 1 
+    let season ='summer';
+    let response;
+
+    if (season === 'summer'){
+      response = 'It\'s summer!'; 
+    } else if (season === 'winter') {
+        response = 'Its cold outside'  
+      } else {
+        response = 'Season is unknown';
+      }
+
+    const responseInst = document.querySelector('section');
+    
+    let cond1 = document.createElement('p');
+    cond1.textContent = response;
+    responseInst.appendChild(cond1);
+ 
+  </script> 
+  <script> 
+    //conditional 2 
+    let score = 20;
+    let machineActive = true;
+    let response2; 
+
+    if (!machineActive) { 
+      response2 = 'Turn Machine ON'
+      score = 'Error'
+    } else {
+        if (score <0 || score >100) {
+        response2 = "This is not possible, an error has occurred."
+        } else if (score <=19) {
+        response2 = 'That was a terrible score — total fail!';
+        } else if (score <=39) {
+        response2 = 'You know some things, but it\'s a pretty bad score. Needs improvement.';
+        } else if (score <=69) {
+        response2 = "You did a passable job, not bad!";
+        } else if (score <=89) {
+        response2= "That\'s a great score, you really know your stuff.";
+        } else if (score <=100) {
+        response2 =  "What an amazing score! Did you cheat? Are you for real?";
+        }  
+    }
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    let para2 = document.createElement('p');
+
+    para1.textContent = `Your score is ${ score }`;
+    para2.textContent = response2;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script> 
+  <script>
+    // Conditional 3 
+    let machineAct = true; 
+    let pwd = user.value;  
+    let machineResult; 
+    let pwdResult; 
+
+
+  </script>
+
+</html>
