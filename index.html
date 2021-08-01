@@ -34,6 +34,7 @@
             </select>
         </p>
         <p id=moodColor></p>
+        <section class="preview"></section>
         <script>
             //Js goes here :)
         const button = document.querySelector('button'); 
@@ -114,5 +115,82 @@
             }
         }
         </script>
+        <script >
+            // Conditional 1 
+            let season ='summer';
+            let response;
+        
+            if (season === 'summer'){
+              response = 'It\'s summer!'; 
+            } else if (season === 'winter') {
+                response = 'Its cold outside'  
+              } else {
+                response = 'Season is unknown';
+              }
+        
+            const responseInst = document.querySelector('section');
+            
+            let cond1 = document.createElement('p');
+            cond1.textContent = response;
+            responseInst.appendChild(cond1);
+         
+          </script> 
+          <script> 
+            //conditional 2 
+            let score = 20;
+            let machineActive = true;
+            let response2; 
+        
+            if (!machineActive) { 
+              response2 = 'Turn Machine ON'
+              score = 'Error'
+            } else {
+                if (score <0 || score >100) {
+                response2 = "This is not possible, an error has occurred."
+                } else if (score <=19) {
+                response2 = 'That was a terrible score — total fail!';
+                } else if (score <=39) {
+                response2 = 'You know some things, but it\'s a pretty bad score. Needs improvement.';
+                } else if (score <=69) {
+                response2 = "You did a passable job, not bad!";
+                } else if (score <=89) {
+                response2= "That\'s a great score, you really know your stuff.";
+                } else if (score <=100) {
+                response2 =  "What an amazing score! Did you cheat? Are you for real?";
+                }  
+            }
+            const section = document.querySelector('section');
+            let para1 = document.createElement('p');
+            let para2 = document.createElement('p');
+        
+            para1.textContent = `Your score is ${ score }`;
+            para2.textContent = response2;
+        
+            section.appendChild(para1);
+            section.appendChild(para2);
+          </script> 
+          <script>
+            // Conditional 3 
+            let machineAct = true; 
+            let pwd = 'cheese';  
+            let machineResult; 
+            let pwdResult; 
+        
+            if (!machineActive) {
+              machineResult = 'Machine is off, switch ON. '
+            } else {
+                pwd = 'cheese' ? pwdResult ='Welcome, Login successfull' : pwdResult ='Login attempt unsuccessfull';
+              }
+          
+            let par1 = document.createElement('p');
+            let par2 = document.createElement('p');
+        
+            par1.textContent = machineResult;
+            par2.textContent = pwdResult;
+        
+            section.appendChild(par1);
+            section.appendChild(par2);
+        
+          </script>
     </body>
 </html>
