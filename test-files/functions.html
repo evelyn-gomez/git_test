@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      canvas {
+            border: 1px solid black;
+          }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+      <h1> Functions 1-3 Tasks</h1>
+
+    <section class="preview"> </section>
+
+    <canvas width="480" height="320">   </canvas>
+
+  </body>
+  <script> 
+  //Function 1  & 3 after improving function 
+    let names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+    let para = document.createElement('p');
+    
+
+    function random(min,max) {
+        let randomNum = Math.floor(Math.random()* (max-min) + (min)
+         )
+        return randomNum; 
+    }
+    function chooseName () {
+         let randomName = names[random(0,names.length)];
+        return randomName; 
+    }
+
+    chooseName(); 
+
+    para.textContent = chooseName(); 
+  
+    const section = document.querySelector('section');
+    section.appendChild(para);
+
+    chooseName();
+  </script>
+  <script>
+    // Function 2
+    
+    let canvas = document.querySelector('canvas');
+    let para2 = document.createElement('p');
+    let ctx = canvas.getContext('2d');
+    let x = 50;
+    let y = 60;
+    let width = 100;
+    let height = 75;
+    let color = 'olive';
+    function draw() {
+            ctx.beginPath(); 
+            ctx.fillStyle = color; 
+            ctx.fillRect(x,y,width,height);
+        
+    }     
+    draw();
+    // Need clear canvas before drawing? So when 
+    // code is updated in the case of the live version
+    // you don't get lots of rectangles drawn on top of one another. --- currently drawing on top of each other. 
+
+    const section2 = document.querySelector('section');
+  </script>
+</html>
