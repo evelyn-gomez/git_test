@@ -48,7 +48,14 @@
     </div>
     <div class='powerOf'> Calculate x to the power of n. 
       <button id="calcButton">Enter Values</button>
-      <p></p>
+    </div>
+    <div class="agePrompt">
+      <label for="age">Please enter you're age</label>
+      <input type="number" id="age" >
+    </div>
+    <div class="divForFizz">
+      <label for="fizzbuzz">Please enter the number you would like to FizzBuzz up to! </label>
+      <input type="number" id="fizzbuzz"></input>
     </div>
    
   </body>
@@ -67,14 +74,14 @@
          
     }
 
-    chooseName(); 
+      chooseName(); 
 
-    para.textContent = chooseName(); 
-  
-    const section = document.querySelector('section');
-    section.appendChild(para);
+      para.textContent = chooseName(); 
+    
+      const section = document.querySelector('section');
+      section.appendChild(para);
 
-    chooseName();
+      chooseName();
   </script>
   <script>
     // Function 2
@@ -139,6 +146,117 @@
       powerOf.appendChild(para4);
       return para4.textContent =`${someX} ** ${someN} =  ${result}`;
     } 
+  </script>
+  <script>
+    let ageInput = document.querySelector('#age');
+
+    function ageUnder() {
+      alert('Need to be 18 to create account');
+    }
+
+    function ageOver() {
+      alert('Welcome!');
+    }
+
+    ageInput.onchange = function () { 
+      ageInput.value < 18 ? ageUnder() : ageOver(); 
+    }
+
+  </script>
+  <script>
+    function add7(num) {
+      return num + 7; 
+    }
+
+    function multiply(num1, num2) {
+      return num1 * num2;
+    }
+
+    function capitalize(string) {
+      let firstChar = string.charAt([0]);
+      let capFirstChar = firstChar.toUpperCase(); 
+      let lowerCaseString = string.toLowerCase(); 
+      return console.log(combinedString = capFirstChar + lowerCaseString.slice(1,))
+    }
+
+  function lastLetter(string) {
+    return string.slice(-1);
+  } 
+
+
+ 
+  </script>
+  <script>
+    let fizzInput = document.querySelector('#fizzbuzz');
+    let para5 = document.createElement('p');
+    let div5 = document.querySelector('.divForFizz');
+
+    
+
+    fizzInput.onchange = function() {
+      let num = fizzInput.value;  
+      printNum(num);
+      div5.appendChild(para5);
+      return para5.textContent = `${printNum(num)}`;
+    }
+
+    function printNum(num){
+      for (let i = 1; i <= num; i++) {
+        if( (i % 3 === 0) && (i % 5 === 0)) {
+          console.log('fizz buzz'); 
+        } else if (i % 3 === 0){
+          console.log('fizz');
+        } else if ( i % 5 === 0 ) {
+          console.log('buzz');
+        } else {
+          console.log(i);
+        }
+      }
+    }
+
+  </script>
+  <script>
+    //Pseudo code Problem - 
+      
+    let callCounter = 0;
+      function downUp(string){
+        callCounter++;
+        if (string.length === 1) {
+          console.log(callCounter, string);
+        } else {
+          console.log(callCounter, string)
+          downUp(string.substring(string.length -1, string))
+          console.log(callCounter, string);
+        }
+        callCounter--
+      }
+
+      
+// When faced w/ TypeError -- think of the data type you are trying got run a method or operation on. 
+  // reference something that doesnt exist -> ReferenceError: is not defined
+  // read property of `undefined` or `null` -> TypeError: cannot read property of
+  // call something that is not a function -> TypeError: is not a function
+  // code run is not written correctly -> SyntaxError: invalid/ illegal or unexpected toke
+ 
+
+  //Tips for Resolving Errors 
+        // 1. Read error carefully... try to understand on your own. 
+        // 2. Next, Google error! if nothing else will clarify as to why throwing that error. 
+        // 3. Use debugger! -- Lets you set breakpoints - view the value of any given variable at a specific 
+        //     point in your applications execution 
+        
+
+  let secretVar;
+  function getLength(str, secretVar) {
+    return str.length;
+  }
+
+  for (let i = 0; i < 1000; i++) {
+    let secret = Math.random();
+    let strVal = Math.random() < .99 ? 'a string' : undefined;
+    console.log(getLength(strVal, secret));
+  }
+
   </script>
 </html>
   
