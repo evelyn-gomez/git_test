@@ -1,69 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>    
-    body {
-      margin: 0;
-    }
-    div {
-      box-sizing: border-box;
-        background-color: rgb(112, 112, 143);
-     }
-    li {
-        margin-bottom: 10px;
-      }
-
-    li button {
-      font-size: 8px;
-      margin-left: 20px;
-      color: #666;
-    }
-    </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
- 
-
+  <link rel="stylesheet" href="dom-manipulation.css" > 
+  <script src="dom-manipulation.js" defer></script>
 </head>
-<h1>DOM manipulation - My Shopping List</h1>
+<!-- <h1>DOM manipulation - My Shopping List</h1> -->
 <body>         
-  <div> 
+  <!-- <div> 
     <label for="item">Enter a new item:</label>
     <input type="text" name="item" id="item">  
     <button>Add Item</button>
+  </div> -->
+  <div class="container">
+    <button id="1">click me</button>
+    <button id="2">click me</button>
+    <button id="3">click me</button>
   </div>
-
-  <ul>
-
-  </ul>
-  <script>
-    const div = document.querySelector('div');
-    const ul = document.querySelector('ul');
-    const input = document.querySelector('input')
-    const button = document.querySelector('button'); 
-
-    button.onclick = function () {
-      let inputValue = input.value;
-      input.value = ' ';
-      let listItem = document.createElement('li');
-      let listText = document.createElement('span');
-      let listBtn = document.createElement('button');
-
-      listItem.appendChild(listText); 
-      listText.textContent = inputValue;
-      listItem.appendChild(listBtn);
-      listBtn.textContent = 'Delete';
-
-      ul.appendChild(listItem);
-
-      listBtn.onclick = function() {
-        ul.removeChild(listItem);
-        input.focus();
-      }
-      input.focus();
-    } 
   
-  </script>
 </body>
 </html>
  
