@@ -228,36 +228,36 @@ function lastLetter(string) {
 
 
 //Active Learning  - Launch Countdown
-let para = document.querySelector('#midCont');
-let input = document.querySelector('input');
-let button = document.querySelector('#searchbutton'); 
-let para2 = document.createElement('p')
-const rawContacts = ['Chris:2323432323', 'Ana:2123423543', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975']
-const contacts = rawContacts.map(contactString => {
-    let [contactName, contactPhone] = contactString.split(':');
-    return {
-        name: contactName,
-        phone: contactPhone
-    }
-});
+// let para = document.querySelector('#midCont');
+// let input = document.querySelector('input');
+// let button = document.querySelector('#searchbutton'); 
+// let para2 = document.createElement('p')
+// const rawContacts = ['Chris:2323432323', 'Ana:2123423543', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975']
+// const contacts = rawContacts.map(contactString => {
+//     let [contactName, contactPhone] = contactString.split(':');
+//     return {
+//         name: contactName,
+//         phone: contactPhone
+//     }
+// });
 
 
-button.addEventListener('click', function () {
-    let searchName = input.value;
-    let contact = findContact(searchName);
-    let message = contact 
-        ? `${contact.name}'s phone number is ${contact.phone}`
-        : `Contact not found, for ${searchName} `;
-    para2.textContent = message;
-    para.appendChild(para2);
-});
+// button.addEventListener('click', function () {
+//     let searchName = input.value;
+//     let contact = findContact(searchName);
+//     let message = contact 
+//         ? `${contact.name}'s phone number is ${contact.phone}`
+//         : `Contact not found, for ${searchName} `;
+//     para2.textContent = message;
+//     para.appendChild(para2);
+// });
 
-/**
- * .find
- * @param {*}
- * @returns 
- */
-function findContact(name) {
-    name = name.toLowerCase();
-    return contacts.find(contact => contact.name.toLowerCase() === name);
-}
+// /**
+//  * .find
+//  * @param {*}
+//  * @returns 
+//  */
+// function findContact(name) {
+//     name = name.toLowerCase();
+//     return contacts.find(contact => contact.name.toLowerCase() === name);
+// }
