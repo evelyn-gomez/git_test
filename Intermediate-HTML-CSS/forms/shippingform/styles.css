@@ -1,0 +1,29 @@
+input[type="text"]:disabled {
+  background: #eee;
+  border: 1px solid #ccc;
+}
+
+
+.disabled-label {
+color: rgb(172, 172, 172);
+}
+
+.otherform div{
+} 
+
+input#name2{
+  position: inherit;
+}
+
+  input:-moz-read-only, textarea:-moz-read-only,
+  input:read-only, textarea:read-only {
+    border: 0;
+    box-shadow: none;
+    background-color: white;
+  }
+
+  textarea:-moz-read-write,
+  textarea:read-write {
+    box-shadow: inset 1px 1px 3px #ccc;
+    border-radius: 5px;
+  }
