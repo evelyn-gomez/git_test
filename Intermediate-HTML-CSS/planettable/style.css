@@ -1,0 +1,14 @@
+table{
+  /* border: 0.5em solid black; */
+  border: none;
+}
+tr{
+  /* border: 0.5em solid lightcoral; */
+}
+th{
+  border: .1em solid palevioletred;
+  padding:none;
+}
+td{
+  border: 1px solid lightblue;
+}
